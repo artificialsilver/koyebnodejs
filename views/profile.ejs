@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자기소개 - <%= name %></title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <h1><%= name %></h1>
+    <p><%= introduction %></p>
+  </header>
+
+  <section id="about"> 
+    <h2>소개</h2>
+    <p><%= description %></p>
+  </section>
+
+  <section id="skills">
+    <h2>기술 스택</h2>
+    <ul>
+      <% skills.forEach(function(skill) { %>
+        <li><%= skill %></li>
+      <% }); %>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>연락처</h2>
+    <p>이메일: <%= email %></p>
+    <p>LinkedIn: <a href="<%= linkedin %>"><%= linkedin %></a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 <%= name %></p>
+  </footer>
+</body>
+</html>
